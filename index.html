@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <title>Popular movies</title>
+</head>
+<body>
+    <header class="cabecalho">
+        <h1 class="cabecalho__titulo">Filmes Populares</h1>
+        <input type="search" class="cabecalho__pesquisa" placeholder="Digite algum filme para pesquisar...">
+        <div class="cabecalho__filtro">
+            <input type="checkbox" class="cabecalho__checkbox">
+            <h2 class="cabecalho__filtro-descricao">Mostrar meus filmes favoritos apenas</h2>
+        </div>
+    </header>
+    <section class="filmes__lista">
+        <div class="card">
+            <div class="card__imagem">
+                <img src="img/metropolis_poster.jpg" alt="Poster do filme Metrópolis">
+            </div>
+            <div class="card__titulo">
+                <h3 class="card__titulo-filme">Metrópolis (1927)</h3>
+                <div class="card__nota">
+                    <img src="img/Star.svg" alt="Ícone de nota do filme" class="card__nota-icone">
+                    <p class="card__nota-valor">8.3</p>
+                </div>
+                <a href="#" class="card__link-favoritar">
+                    <p class="card__favoritar favoritar">Favoritar</p>
+                </a>
+            </div>
+            <p class="card__descricao">Numa cidade futurística dividida entre os trabalhadores e os planejadores, o filho do maior planejador se apaixona por
+            uma trabalhadora.</p>
+        </div>
+
+        <div class="card">
+            <div class="card__imagem">
+                <img src="img/a-lista-de-schindler_poster.jpg"
+                    alt="Poster do filme A Lista de Schindler">
+            </div>
+            <div class="card__titulo">
+                <h3 class="card__titulo-filme">A Lista de Schindler (1993)</h3>
+                <div class="card__nota">
+                    <img src="img/Star.svg" alt="Ícone de nota do filme" class="card__nota-icone">
+                    <p class="card__nota-valor">9.0</p>
+                </div>
+                <a href="#" class="card__link-favoritar">
+                    <p class="card__favoritar favorito">Favoritar</p>
+                </a>
+            </div>
+            <p class="card__descricao">Depois de testemunhar a perseguição dos judaicos na Polônia ocupada pelos alemães durante a Segunda Guerra Mundial, o
+            industrial Oskar Schindler se começa a preocupar com sua força de trabalho judaica.</p>
+        </div>
+        
+        <div class="card">
+            <div class="card__imagem">
+                <img src="img/resgate-do-soldado-ryan_poster.jpg"
+                    alt="Poster do filme O Resgate do Soldado Ryan">
+            </div>
+            <div class="card__titulo">
+                <h3 class="card__titulo-filme">O Resgate do Soldado Ryan (1998)</h3>
+                <div class="card__nota">
+                    <img src="img/Star.svg" alt="Ícone de nota do filme" class="card__nota-icone">
+                    <p class="card__nota-valor">8.6</p>
+                </div>
+                <a href="#" class="card__link-favoritar">
+                    <p class="card__favoritar favoritar">Favoritar</p>
+                </a>
+            </div>
+            <p class="card__descricao">Depois de chegar a Normandía, um grupo de soldados precisam encontrar ao unico irmão vivo de tres que morreram na
+            guerra.</p>
+        </div>
+        <div class="card">
+            <div class="card__imagem">
+                <img src="img/a-vida-e-bela_poster.jpg"
+                    alt="Poster do filme A Vida é Bela">
+            </div>
+            <div class="card__titulo">
+                <h3 class="card__titulo-filme">A Vida é Bela (1997)</h3>
+                <div class="card__nota">
+                    <img src="img/Star.svg" alt="Ícone de nota do filme" class="card__nota-icone">
+                    <p class="card__nota-valor">8.6</p>
+                </div>
+                <a href="#" class="card__link-favoritar">
+                    <p class="card__favoritar favorito">Favoritar</p>
+                </a>
+            </div>
+            <p class="card__descricao">Quando um bibliotecário judeu e seu filho se tornarem vítimas do Holocausto, ele usará uma mistura perfeita de vontade,
+            humor e imaginação para proteger seu filho dos perigos do campo de concentração.</p>
+        </div>
+    </section>
+</body>
+</html>

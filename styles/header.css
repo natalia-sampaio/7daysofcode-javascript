@@ -1,0 +1,51 @@
+.cabecalho {
+    text-align: center;
+}
+
+.cabecalho__titulo {
+    font-size: 36px;
+    margin: 2em 0;
+}
+
+.cabecalho__pesquisa {
+    font-size: 18px;
+    width: 30%;
+    background: url("../img/search-icon.svg") no-repeat;
+    background-position: 97%;
+    background-color: var(--branco);
+    opacity: 0.2;
+    border-radius: 8px;
+    padding: 1em;
+    color: var(--cinza);
+    margin-bottom: 1.5em;
+}
+
+.cabecalho__filtro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4em;
+}
+
+.cabecalho__checkbox {
+    width: 16px;
+    height: 16px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    accent-color: var(--lilas);
+    border: 2px solid var(--lilas);
+    border-radius: 4px;
+    transition-duration: 0.3s;
+    margin-right: 0.5em;
+}
+
+.cabecalho__checkbox:checked::before {
+    background-color: var(--lilas);
+    content: '\2714';
+    font-size: 10px;
+    display: flex;
+    justify-content: center;
+    color: var(--branco);
+}

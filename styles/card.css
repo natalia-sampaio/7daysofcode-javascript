@@ -1,0 +1,75 @@
+.filmes__lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: var(--cor-de-fundo-secundaria);
+    display: flex;
+    align-items: center;
+    width: 60%;
+    margin: 2em;
+    border-radius: 0.5em;
+    box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
+}
+
+.card__imagem {
+    margin: 0 2em;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
+}
+
+.card__imagem img {
+    width: 139px;
+    height: 139px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.card__titulo {
+    display: grid;
+    align-items: center;
+    margin: 3em;
+    grid-template:
+        "titulo titulo"
+        "nota favoritar" ;
+}
+
+.card__titulo-filme {
+    margin-bottom: 1em;
+    text-align: start;
+    grid-area: titulo;
+}
+
+.card__nota {
+    display: flex;
+    align-items: center;
+    margin-right: 2em;
+    grid-area: nota;
+}
+
+.card__link-favoritar {
+    display: flex;
+    align-items: center;
+    grid-area: favoritar;
+    text-decoration: none;
+    color: var(--branco);
+}
+
+.card__favoritar {
+    padding-left: 2em;
+}
+
+.card__nota-icone,
+.card__link-icone {
+    margin-right: 0.5em;
+}
+
+.favorito {
+    background: url("../img/Heart-filled.svg") no-repeat;
+}
+
+.favoritar {
+    background: url("../img/Heart.svg") no-repeat;
+}

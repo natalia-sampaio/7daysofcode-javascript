@@ -1,0 +1,20 @@
+@import url("styles/header.css");
+@import url("styles/card.css");
+
+:root {
+    --cor-de-fundo: #17162E;
+    --cor-de-fundo-secundaria: #1D1C3B;
+    --branco: #FFFFFF;
+    --cinza: #8A8A8A;
+    --cinza-claro: #ACACAC;
+    --lilas: #706EA8;
+    --fonte: "Kumbh Sans";
+}
+
+body {
+    background: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: var(--fonte);
+    font-size: 18px;
+    font-weight: 500;
+}
