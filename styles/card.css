@@ -15,6 +15,10 @@
     box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px;
 }
 
+.card span {
+    margin-right: 2em;
+}
+
 .card__imagem {
     margin: 0 2em;
     box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px;
@@ -43,33 +47,21 @@
 }
 
 .card__nota {
-    display: flex;
-    align-items: center;
-    margin-right: 2em;
     grid-area: nota;
 }
 
-.card__link-favoritar {
+.card__favorito {
+    grid-area: favoritar;
+}
+
+.card__nota,
+.card__nota img,
+.card__favorito img {
+    margin-right: 1em;
+}
+
+.card__nota,
+.card__favorito {
     display: flex;
     align-items: center;
-    grid-area: favoritar;
-    text-decoration: none;
-    color: var(--branco);
-}
-
-.card__favoritar {
-    padding-left: 2em;
-}
-
-.card__nota-icone,
-.card__link-icone {
-    margin-right: 0.5em;
-}
-
-.favorito {
-    background: url("../img/Heart-filled.svg") no-repeat;
-}
-
-.favoritar {
-    background: url("../img/Heart.svg") no-repeat;
 }
