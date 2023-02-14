@@ -1,7 +1,7 @@
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=95b6f8&height=120&section=header"/>
 
 <h1 align="center">JavaScript and DOM</h1>
-<p align="center">This project is the result of an activity called <a href="https://7daysofcode.io/matricula/responsividade">7 days of code</a>.</p>
+<p align="center">This project is the result of an activity called <a href="https://7daysofcode.io/">7 days of code</a>.</p>
 
 <div align="center">
 
