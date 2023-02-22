@@ -1,6 +1,4 @@
-const moviesList = document.createElement('section');
-moviesList.classList.add('filmes__lista');
-document.body.appendChild(moviesList);
+const moviesList = document.getElementById('filmes__lista');
 
 export function renderMovie(movie) {
     const movieElement = document.createElement('div');

@@ -13,14 +13,14 @@
 <body>
     <header class="cabecalho">
         <h1 class="cabecalho__titulo">Filmes Populares</h1>
-        <input type="search" class="cabecalho__pesquisa" placeholder="Digite algum filme para pesquisar...">
+        <input type="search" class="cabecalho__pesquisa" id="search__bar" placeholder="Digite algum filme para pesquisar..." aria-label="barra de pesquisa">
         <div class="cabecalho__filtro">
-            <input type="checkbox" class="cabecalho__checkbox">
+            <input type="checkbox" class="cabecalho__checkbox" aria-label="filtro de filmes favoritos">
             <h2 class="cabecalho__filtro-descricao">Mostrar meus filmes favoritos apenas</h2>
         </div>
     </header>
-    <!-- <section class="filmes__lista">
-        <div class="card">
+    <section class="filmes__lista" id="filmes__lista">
+        <!-- <div class="card">
             <div class="card__imagem">
                 <img src="https://m.media-amazon.com/images/M/MV5BMTg5YWIyMWUtZDY5My00Zjc1LTljOTctYmI0MWRmY2M2NmRkXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" alt="Poster do filme Metrópolis">
             </div>
@@ -37,8 +37,8 @@
             </div>
             <span>Numa cidade futurística dividida entre os trabalhadores e os planejadores, o filho do maior planejador se apaixona por
             uma trabalhadora.</span>
-        </div>
-    </section> -->
+        </div> -->
+    </section>
     <script src="js/script.js" type="module"></script>
 </body>
 </html>
