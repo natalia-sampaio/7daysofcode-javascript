@@ -1,4 +1,5 @@
 const moviesList = document.getElementById('filmes__lista');
+const favoriteMovies = JSON.parse(localStorage.getItem('movies') )|| [];
 
 export function renderMovie(movie) {
     const movieElement = document.createElement('div');
@@ -32,22 +33,52 @@ export function renderMovie(movie) {
     movieRating.appendChild(ratingValue);
     movieTitleContainer.appendChild(movieRating);
 
-    const favoriteButtonContainer = document.createElement('div');
-    favoriteButtonContainer.classList.add('card__favorito');
-    const favoriteButton = document.createElement('img');
+    const favoriteButton = document.createElement('div');
+    favoriteButton.classList.add('card__favorito');
+    const favoriteButtonCheckbox = document.createElement('input');
+    favoriteButtonCheckbox.setAttribute('type', 'checkbox');
+    favoriteButtonCheckbox.setAttribute('id', `${movie.id}`);
+    favoriteButtonCheckbox.setAttribute('class','card__favorito-botao');
+    const favoriteButtonLabel = document.createElement('label');
+    favoriteButtonLabel.setAttribute('for', `${movie.id}`);
+    favoriteButtonLabel.setAttribute('class', 'favorito-botao__label');
+    const favoriteButtonLabelImage = document.createElement('span');
+    favoriteButtonLabelImage.setAttribute('class', 'favorito-botao__imagem');
     const favoriteButtonText = document.createElement('span');
-    if (movie.isFavorited) {
-        favoriteButton.src = 'img/Heart-filled.svg';
-        favoriteButtonText.textContent = 'Favorito';
-    } else {
-        favoriteButton.src = 'img/Heart.svg';
-        favoriteButtonText.textContent = 'Favoritar';
-    }
-    favoriteButtonContainer.appendChild(favoriteButton);
-    favoriteButtonContainer.appendChild(favoriteButtonText);
-    movieTitleContainer.appendChild(favoriteButtonContainer);
+    favoriteButtonText.textContent = 'Favoritar';
+    favoriteButtonLabel.appendChild(favoriteButtonLabelImage);
+    favoriteButton.appendChild(favoriteButtonCheckbox);
+    favoriteButton.appendChild(favoriteButtonLabel);
+    favoriteButton.appendChild(favoriteButtonText);
+    movieTitleContainer.appendChild(favoriteButton);
 
     const movieDescription = document.createElement('span');
     movieDescription.textContent = movie.overview;
     movieElement.appendChild(movieDescription);
+
+    const isFavorited = favoriteMovies.find(element => element.id === movie.id);
+    if(isFavorited) {
+        favoriteButtonCheckbox.checked = true;
+        favoriteButtonText.textContent = 'Favorito';
+    }
+
+    favoriteButtonCheckbox.addEventListener("click", () => {
+        if(!isFavorited) {
+            favoriteButtonText.textContent = 'Favorito';
+            addMovieToFavorites(movie);
+        } else {
+            favoriteButtonText.textContent = 'Favoritar';
+            removeMovieFromFavorites(isFavorited.id); 
+        }
+    });
+}
+
+function addMovieToFavorites(movie) {
+    favoriteMovies.push(movie);
+    localStorage.setItem('movies', JSON.stringify(favoriteMovies));
+}
+
+function removeMovieFromFavorites(id) {
+    favoriteMovies.splice(favoriteMovies.findIndex(elemento => elemento.id === id), 1);
+    localStorage.setItem('movies', JSON.stringify(favoriteMovies));
 }

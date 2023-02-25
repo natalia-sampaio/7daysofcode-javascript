@@ -14,22 +14,25 @@ async function searchMovie(search_title) {
     const url = `https://api.themoviedb.org/3/search/movie?api_key=06a89df5363d1e40a48fe8fe3503438b&language=en-US&query=${search_title}&page=1&include_adult=false`
     const fetchResponse = await fetch(url);
     const response = await fetchResponse.json();
+    if (search_title === "") {
+        return location.reload();
+    }
     return response.results.forEach(movie => renderMovie(movie));
 }
 
-var search_title = document.getElementById('search__bar');
+var search_title = document.getElementById("search__bar");
 search_title.addEventListener("keypress", function(event) {
     if (event.key === "Enter") {
         event.preventDefault();
         clearPage();
         searchMovie(search_title.value);
+        search_title.value = "";
     }
 });
 
 function clearPage() {
-    const moviesList = document.getElementById('filmes__lista');
+    const moviesList = document.getElementById("filmes__lista");
     while (moviesList.firstChild) {
         moviesList.removeChild(moviesList.lastChild);
     }
-    console.log("teste")
 }
