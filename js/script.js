@@ -15,13 +15,20 @@ async function searchMovie(search_title) {
     const fetchResponse = await fetch(url);
     const response = await fetchResponse.json();
     if (search_title === "") {
-        return location.reload();
+        location.reload();
     }
     return response.results.forEach(movie => renderMovie(movie));
 }
 
+function clearPage() {
+    const moviesList = document.getElementById("filmes__lista");
+    while (moviesList.firstChild) {
+        moviesList.removeChild(moviesList.lastChild);
+    }
+}
+
 var search_title = document.getElementById("search__bar");
-search_title.addEventListener("keypress", function(event) {
+search_title.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
         event.preventDefault();
         clearPage();
@@ -30,9 +37,16 @@ search_title.addEventListener("keypress", function(event) {
     }
 });
 
-function clearPage() {
-    const moviesList = document.getElementById("filmes__lista");
-    while (moviesList.firstChild) {
-        moviesList.removeChild(moviesList.lastChild);
-    }
+function showFavoritedMovies() {
+    JSON.parse(localStorage.getItem('movies')).forEach(movie => renderMovie(movie));
 }
+
+var filterFavoriteMovies = document.querySelector('#filtro');
+filterFavoriteMovies.addEventListener("change", function () {
+    if (this.checked) {
+        clearPage();
+        showFavoritedMovies();
+    } else {
+        location.reload();
+    }
+});
