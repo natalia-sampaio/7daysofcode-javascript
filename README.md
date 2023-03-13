@@ -5,7 +5,7 @@
 
 <div align="center">
 
-![STATUS](https://img.shields.io/badge/status-day%206/7-blue?style=for-the-badge)&nbsp;
+![STATUS](https://img.shields.io/badge/status-deployed-6bffb0?style=for-the-badge)&nbsp;
 ![HTML 5](https://img.shields.io/badge/-HTML-0D1117?style=for-the-badge&logo=html5&logoColor=f45430&labelColor=0D1117)&nbsp;
 ![CSS](https://img.shields.io/badge/-CSS-0D1117?style=for-the-badge&logo=CSS3&logoColor=1572B6&labelColor=0D1117)&nbsp;
 ![JavaScript](https://img.shields.io/badge/-JavaScript-0D1117?style=for-the-badge&logo=javascript&labelColor=0D1117)&nbsp;
